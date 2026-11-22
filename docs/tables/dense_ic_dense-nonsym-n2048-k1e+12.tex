@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\small
+\caption{dense_ic: dense-nonsym-n2048-k1e+12. Median over 15 timed runs after 3 warmups; times in ms.}
+\label{tab:dense_ic-dense-nonsym-n2048-k1e+12}
+\begin{tabular}{lrrrrlrr}
+\hline
+Method & Setup & Solve & Total & Outer & Status & $\|b-Ax\|_2/\|b\|_2$ & Mem (MiB) \\
+\hline
+$\mathrm{LU}_{64}\ \text{(direct)}$ & 22.7 & 0.9 & 23.6 & 1 & DNC (success) & 7.76e-9 & 64.0 \\
+$\mathrm{FGMRES}_{64}(\mathrm{LU}_{64})$ & 22.9 & 559.6 & 582.4 & 111 & converged & 9.97e-11 & 65.0 \\
+$\mathrm{IR}_{64\leftarrow 32}[\mathrm{LU}_{32}]\ \text{(plain IR)}$ & 4.9 & 5.2 & 10.2 & 2 & DNC (rejected) & 9.84e-4 & 64.0 \\
+$\mathrm{FGMRES}_{64}[\mathrm{IR}_{64\leftarrow 32}[\mathrm{LU}_{32}]]$ & 5.3 & 2456.3 & 2461.6 & 400 & DNC (max_steps) & 1.94e-4 & 65.0 \\
+$\mathrm{FGMRES}_{64}[\mathrm{IR}_{64\leftarrow 32}[\mathrm{LU}_{32}]] (loose)$ & 4.9 & 3071.2 & 3076.1 & 400 & DNC (max_steps) & 1.16e-2 & 65.0 \\
+$\mathrm{IR}_{64\leftarrow 32}[\mathrm{LU}_{32} | \mathrm{LU}_{64} fallback]$ & 27.2 & 41.6 & 68.7 & 32 & DNC (stagnated) & 9.13e-7 & 96.0 \\
+$\mathrm{FGMRES}_{64}[\mathrm{IR}_{64\leftarrow 32}[\mathrm{LU}_{32}|\mathrm{LU}_{64} fb]|dir(\mathrm{LU}_{64})] (ladder)$ & 27.6 & 1422.5 & 1450.1 & 330 & converged & 8.89e-11 & 97.0 \\
+\hline
+\end{tabular}
+\end{table}

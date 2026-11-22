@@ -1,0 +1,10 @@
+﻿k=1e+08 IR64<-32[LU32 | LU64 fallback]                       new: success  it= 3 acc/rej=2/1 rr=2.278594e-12 | stored: success  it= 3 acc/rej=2/1 rr=2.278594e-12 | IDENTICAL
+k=1e+08 IR64<-32[LU32 | LU64 fallback] damped rho=0.9: no stored row
+k=1e+08 FGMRES64[IR64<-32[LU32|LU64 fb]|dir(LU64)] (ladder)  new: success  it= 2 acc/rej=2/2 rr=4.816875e-13 | stored: success  it= 2 acc/rej=2/2 rr=4.816875e-13 | IDENTICAL
+k=1e+10 IR64<-32[LU32 | LU64 fallback]                       new: success  it= 3 acc/rej=2/1 rr=4.691310e-13 | stored: success  it= 3 acc/rej=2/1 rr=4.691310e-13 | IDENTICAL
+k=1e+10 IR64<-32[LU32 | LU64 fallback] damped rho=0.9        new: success  it= 3 acc/rej=2/1 rr=3.902344e-13 | stored: success  it= 3 acc/rej=2/1 rr=3.902344e-13 | IDENTICAL
+k=1e+10 FGMRES64[IR64<-32[LU32|LU64 fb]|dir(LU64)] (ladder)  new: success  it= 2 acc/rej=2/2 rr=3.704654e-13 | stored: success  it= 2 acc/rej=2/2 rr=3.704654e-13 | IDENTICAL
+k=1e+12 IR64<-32[LU32 | LU64 fallback]                       new: success  it= 3 acc/rej=2/1 rr=1.872327e-12 | stored: success  it= 3 acc/rej=2/1 rr=1.872327e-12 | IDENTICAL
+k=1e+12 IR64<-32[LU32 | LU64 fallback] damped rho=0.9        new: success  it= 3 acc/rej=2/1 rr=1.969472e-12 | stored: success  it= 3 acc/rej=2/1 rr=1.969472e-12 | IDENTICAL
+k=1e+12 FGMRES64[IR64<-32[LU32|LU64 fb]|dir(LU64)] (ladder)  new: success  it= 2 acc/rej=2/2 rr=1.097814e-12 | stored: success  it= 2 acc/rej=2/2 rr=1.097814e-12 | IDENTICAL
+ALL IDENTICAL

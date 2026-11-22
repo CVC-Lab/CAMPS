@@ -1,0 +1,7 @@
+experiments\matrices.py:157: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\SparseCsrTensorImpl.cpp:51.)
+  csr64 = torch.sparse_csr_tensor(crow, col, vals, size=(n, n))
+poisson g32 acceptance=residual: conv=True corr=3 acc/rej=3/0 solve=112.3ms rr=9.0e-13
+poisson g32 acceptance=energy: conv=True corr=3 acc/rej=3/0 solve=102.6ms rr=9.0e-13
+poisson g48 acceptance=residual: conv=True corr=3 acc/rej=3/0 solve=160.8ms rr=8.8e-13
+poisson g48 acceptance=energy: conv=True corr=3 acc/rej=3/0 solve=157.5ms rr=8.8e-13
+saved results/spd_energy_check.json

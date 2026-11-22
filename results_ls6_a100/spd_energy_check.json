@@ -1,0 +1,154 @@
+{
+ "g32_residual": {
+  "converged": true,
+  "status": "success",
+  "corrections": 3,
+  "accepted": 3,
+  "rejected": 0,
+  "solve_ms": 108.41573402285576,
+  "rel_res": 8.984476932491458e-13,
+  "eta_hat_median": 9.662485131226354e-05,
+  "matvecs": {
+   "fp64": {
+    "matvec": 5,
+    "matmat_cols": 0
+   },
+   "fp32": {
+    "matvec": 345,
+    "matmat_cols": 0
+   }
+  }
+ },
+ "g32_energy": {
+  "converged": true,
+  "status": "success",
+  "corrections": 3,
+  "accepted": 3,
+  "rejected": 0,
+  "solve_ms": 110.76254048384726,
+  "rel_res": 8.984476932491458e-13,
+  "eta_hat_median": 9.662485131226354e-05,
+  "matvecs": {
+   "fp64": {
+    "matvec": 8,
+    "matmat_cols": 0,
+    "absmatvec": 6
+   },
+   "fp32": {
+    "matvec": 345,
+    "matmat_cols": 0
+   }
+  }
+ },
+ "g48_residual": {
+  "converged": true,
+  "status": "success",
+  "corrections": 3,
+  "accepted": 3,
+  "rejected": 0,
+  "solve_ms": 166.53555002994835,
+  "rel_res": 8.787685308934242e-13,
+  "eta_hat_median": 9.576833927845771e-05,
+  "matvecs": {
+   "fp64": {
+    "matvec": 5,
+    "matmat_cols": 0
+   },
+   "fp32": {
+    "matvec": 529,
+    "matmat_cols": 0
+   }
+  }
+ },
+ "g48_energy": {
+  "converged": true,
+  "status": "success",
+  "corrections": 3,
+  "accepted": 3,
+  "rejected": 0,
+  "solve_ms": 168.9861409831792,
+  "rel_res": 8.787685308934242e-13,
+  "eta_hat_median": 9.576833927845771e-05,
+  "matvecs": {
+   "fp64": {
+    "matvec": 8,
+    "matmat_cols": 0,
+    "absmatvec": 6
+   },
+   "fp32": {
+    "matvec": 529,
+    "matmat_cols": 0
+   }
+  }
+ },
+ "counterexample": {
+  "y": 9007199254740992.0,
+  "g": 9007199254740994.0,
+  "r": 2.0,
+  "d": 0.25,
+  "y_new_equals_y": true,
+  "proposed_step_expression": -0.46875,
+  "proposed_step_accepts": true,
+  "committed_h": 0.0,
+  "dphi_hat": 0.0,
+  "bound": 0.0,
+  "certified_test_accepts": false
+ },
+ "energy_margins": {
+  "g32": [
+   {
+    "t": 0,
+    "dphi_hat": -3.0247115364221835,
+    "bound": 5.7954351492330497e-11,
+    "ratio_bound_over_dphi": 1.916029042587066e-11,
+    "accepted": 1.0
+   },
+   {
+    "t": 1,
+    "dphi_hat": -4.722995566088871e-07,
+    "bound": 1.1809867347952088e-15,
+    "ratio_bound_over_dphi": 2.5005035856368335e-09,
+    "accepted": 1.0
+   },
+   {
+    "t": 2,
+    "dphi_hat": -2.0017814132571484e-15,
+    "bound": 1.6049590348711663e-21,
+    "ratio_bound_over_dphi": 8.017653796973255e-07,
+    "accepted": 1.0
+   }
+  ],
+  "g48": [
+   {
+    "t": 0,
+    "dphi_hat": -3.0026436417098266,
+    "bound": 1.9413859992933575e-10,
+    "ratio_bound_over_dphi": 6.46558909730578e-11,
+    "accepted": 1.0
+   },
+   {
+    "t": 1,
+    "dphi_hat": -3.5093170244031463e-07,
+    "bound": 1.9338714604097246e-15,
+    "ratio_bound_over_dphi": 5.510677567634778e-09,
+    "accepted": 1.0
+   },
+   {
+    "t": 2,
+    "dphi_hat": -3.179187542357475e-15,
+    "bound": 3.1574304082158597e-21,
+    "ratio_bound_over_dphi": 9.93156385443848e-07,
+    "accepted": 1.0
+   }
+  ]
+ },
+ "backend": {
+  "cuda.matmul.allow_tf32": false,
+  "cudnn.allow_tf32": false,
+  "cuda.matmul.allow_fp16_reduced_precision_reduction": false,
+  "cuda.matmul.allow_bf16_reduced_precision_reduction": false,
+  "float32_matmul_precision": "highest"
+ },
+ "torch": "2.11.0+cu128",
+ "gpu": "NVIDIA A100-PCIE-40GB"
+}

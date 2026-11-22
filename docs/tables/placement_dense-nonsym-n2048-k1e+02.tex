@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering
+\small
+\caption{placement: dense-nonsym-n2048-k1e+02. Median over 15 timed runs after 3 warmups; times in ms.}
+\label{tab:placement-dense-nonsym-n2048-k1e+02}
+\begin{tabular}{lrrrrlrr}
+\hline
+Method & Setup & Solve & Total & Outer & Status & $\|b-Ax\|_2/\|b\|_2$ & Mem (MiB) \\
+\hline
+$\mathrm{FGMRES}_{64}[\mathrm{IR}_{64\leftarrow 32}[\mathrm{INV}_{32}]]$ & 69.9 & 6.7 & 76.6 & 1 & converged & 9.64e-12 & 64.6 \\
+$\mathrm{FGMRES}_{64}[\mathrm{IR}_{64\leftarrow 16}[\mathrm{INV}_{16}]]$ & 70.0 & 28.3 & 98.4 & 2 & converged & 5.30e-16 & 48.6 \\
+$\mathrm{FGMRES}_{64}[\mathrm{IR}_{64}{\mathrm{b}_{16}}[\mathrm{INVb}_{16}]]$ & 70.2 & 17.3 & 87.4 & 2 & converged & 3.93e-11 & 48.6 \\
+$\mathrm{FGMRES}_{64}[\mathrm{IR}_{64\leftarrow 32}[\mathrm{IR}_{32\leftarrow 16}[\mathrm{INV}_{16}]]]$ & 70.2 & 26.8 & 97.0 & 1 & converged & 2.59e-11 & 64.6 \\
+$\mathrm{FGMRES}_{64}[\mathrm{IR}_{64\leftarrow 32}[\mathrm{FGMRES}_{32}[\mathrm{IR}_{32\leftarrow 16}[\mathrm{INV}_{16}]]]]$ & 70.3 & 28.8 & 99.1 & 1 & converged & 2.60e-11 & 64.8 \\
+$\mathrm{FGMRES}_{64}[\mathrm{IR}_{64\leftarrow 32}[\mathrm{FGMRES}_{32}[\mathrm{IR}_{32}{\mathrm{b}_{16}}[\mathrm{INVb}_{16}]]]]$ & 70.1 & 29.4 & 99.5 & 1 & converged & 1.90e-13 & 64.8 \\
+\hline
+\end{tabular}
+\end{table}

@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\small
+\caption{dense_ic: dense-nonsym-n2048-k1e+06. Median over 15 timed runs after 3 warmups; times in ms.}
+\label{tab:dense_ic-dense-nonsym-n2048-k1e+06}
+\begin{tabular}{lrrrrlrr}
+\hline
+Method & Setup & Solve & Total & Outer & Status & $\|b-Ax\|_2/\|b\|_2$ & Mem (MiB) \\
+\hline
+$\mathrm{LU}_{64}\ \text{(direct)}$ & 21.8 & 0.8 & 22.6 & 1 & converged & 1.69e-14 & 64.0 \\
+$\mathrm{FGMRES}_{64}(\mathrm{LU}_{64})$ & 21.9 & 2.3 & 24.2 & 1 & converged & 1.68e-14 & 65.0 \\
+$\mathrm{IR}_{64\leftarrow 32}[\mathrm{LU}_{32}]\ \text{(plain IR)}$ & 4.9 & 10.1 & 15.0 & 5 & converged & 4.57e-11 & 64.0 \\
+$\mathrm{FGMRES}_{64}[\mathrm{IR}_{64\leftarrow 32}[\mathrm{LU}_{32}]]$ & 4.9 & 15.5 & 20.4 & 2 & converged & 2.22e-12 & 65.0 \\
+$\mathrm{FGMRES}_{64}[\mathrm{IR}_{64\leftarrow 32}[\mathrm{LU}_{32}]] (loose)$ & 4.8 & 14.8 & 19.6 & 2 & converged & 2.22e-12 & 65.0 \\
+$\mathrm{IR}_{64\leftarrow 32}[\mathrm{LU}_{32} | \mathrm{LU}_{64} fallback]$ & 26.9 & 10.2 & 37.1 & 5 & converged & 4.57e-11 & 96.0 \\
+$\mathrm{FGMRES}_{64}[\mathrm{IR}_{64\leftarrow 32}[\mathrm{LU}_{32}|\mathrm{LU}_{64} fb]|dir(\mathrm{LU}_{64})] (ladder)$ & 26.8 & 16.5 & 43.2 & 3 & converged & 2.27e-12 & 97.0 \\
+\hline
+\end{tabular}
+\end{table}

@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.ipynb_checkpoints/
+*.log
+!results/*.log
+verification_*/
+*.out
+*.err
+.DS_Store
+Thumbs.db

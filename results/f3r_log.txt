@@ -1,0 +1,85 @@
+=== f3r  ===
+experiments\matrices.py:157: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\SparseCsrTensorImpl.cpp:51.)
+  csr64 = torch.sparse_csr_tensor(crow, col, vals, size=(n, n))
+  tune F3R {'m2': 10, 'm3': 5, 'sweeps': 2}: ok outer=2 215ms
+  tune F3R {'m2': 10, 'm3': 5, 'sweeps': 4}: ok outer=2 243ms
+  tune F3R {'m2': 10, 'm3': 10, 'sweeps': 2}: ok outer=2 495ms
+  tune F3R {'m2': 10, 'm3': 10, 'sweeps': 4}: ok outer=2 519ms
+  tune F3R {'m2': 20, 'm3': 5, 'sweeps': 2}: ok outer=2 486ms
+  tune F3R {'m2': 20, 'm3': 5, 'sweeps': 4}: ok outer=2 481ms
+  tune F3R {'m2': 20, 'm3': 10, 'sweeps': 2}: ok outer=2 1018ms
+  tune F3R {'m2': 20, 'm3': 10, 'sweeps': 4}: ok outer=2 1074ms
+  tune F3R {'m2': 30, 'm3': 5, 'sweeps': 2}: ok outer=2 765ms
+  tune F3R {'m2': 30, 'm3': 5, 'sweeps': 4}: ok outer=2 806ms
+  tune F3R {'m2': 30, 'm3': 10, 'sweeps': 2}: ok outer=2 1555ms
+  tune F3R {'m2': 30, 'm3': 10, 'sweeps': 4}: ok outer=2 1633ms
+  tuned F3R: {'m2': 10, 'm3': 5, 'sweeps': 2}
+  tune hybrid {'m3': 5, 'mid_maxiter': 15}: ok outer=2 539ms
+  tune hybrid {'m3': 5, 'mid_maxiter': 10}: ok outer=2 366ms
+  tune hybrid {'m3': 8, 'mid_maxiter': 10}: ok outer=2 602ms
+  tuned hybrid: {'m3': 5, 'mid_maxiter': 10}
+  tune hierarchy {}: ok outer=2 923ms
+  tune hierarchy {'J_outer': 1, 'J_inner': 1, 'mid_tol': 0.001, 'mid_restart': 10, 'mid_maxiter': 10, 'leaf_tol': 0.1, 'leaf_restart': 5, 'leaf_maxiter': 5}: ok outer=4 419ms
+  tune hierarchy {'J_outer': 2, 'J_inner': 1, 'mid_tol': 0.001, 'mid_restart': 10, 'mid_maxiter': 20, 'leaf_tol': 0.1, 'leaf_restart': 8, 'leaf_maxiter': 8}: ok outer=2 536ms
+  tune hierarchy {'J_outer': 1, 'J_inner': 1, 'mid_tol': 0.0001, 'mid_restart': 15, 'mid_maxiter': 15, 'leaf_tol': 0.05, 'leaf_restart': 6, 'leaf_maxiter': 6}: ok outer=3 467ms
+  tuned hierarchy: {'J_outer': 1, 'J_inner': 1, 'mid_tol': 0.001, 'mid_restart': 10, 'mid_maxiter': 10, 'leaf_tol': 0.1, 'leaf_restart': 5, 'leaf_maxiter': 5}
+  tune IR-topped {'m2': 10, 'm3': 5, 'sweeps': 2}: ok outer=2 216ms
+  tune IR-topped {'m2': 10, 'm3': 8, 'sweeps': 2}: ok outer=2 362ms
+  tune IR-topped {'m2': 15, 'm3': 5, 'sweeps': 2}: ok outer=2 337ms
+  tune IR-topped {'m2': 15, 'm3': 8, 'sweeps': 2}: ok outer=2 560ms
+  tune IR-topped {'m2': 20, 'm3': 5, 'sweeps': 2}: ok outer=2 467ms
+  tune IR-topped {'m2': 20, 'm3': 8, 'sweeps': 2}: ok outer=2 761ms
+  tuned IR-topped: {'m2': 10, 'm3': 5, 'sweeps': 2}
+  [poisson3d-g32] CG64: ok status=success outer=130 setup=0.0ms solve=52.3ms rr=8.72e-11
+  [poisson3d-g32] FGMRES64(Jacobi64): ok status=success outer=168 setup=0.1ms solve=590.5ms rr=9.17e-11
+  [poisson3d-g32] F3R: FGMRES64[FGMRES32^10[FGMRES16^5[Rich16x2]]]: ok status=success outer=2 setup=0.2ms solve=216.4ms rr=1.64e-12
+  [poisson3d-g32] hybrid: FGMRES64[IR64<-32[FGMRES32[cast32<-16[FGMRES16^5]]]]: ok status=success outer=2 setup=0.2ms solve=370.5ms rr=4.57e-11
+  [poisson3d-g32] FGMRES64[IR64<-32[FGMRES32[IR32<-16[FGMRES16(Jacobi16)]]]]: ok status=success outer=4 setup=0.2ms solve=419.5ms rr=1.56e-11
+  [poisson3d-g32] IR64<-32[FGMRES32^10[cast32<-16[FGMRES16^5[Rich16x2]]]]: ok status=success outer=2 setup=0.2ms solve=215.8ms rr=1.45e-12
+  [poisson3d-g48] CG64: ok status=success outer=179 setup=0.0ms solve=73.6ms rr=9.83e-11
+  [poisson3d-g48] FGMRES64(Jacobi64): ok status=success outer=297 setup=0.1ms solve=1050.2ms rr=9.93e-11
+  [poisson3d-g48] F3R: FGMRES64[FGMRES32^10[FGMRES16^5[Rich16x2]]]: ok status=success outer=3 setup=1.4ms solve=351.2ms rr=1.91e-11
+  [poisson3d-g48] hybrid: FGMRES64[IR64<-32[FGMRES32[cast32<-16[FGMRES16^5]]]]: ok status=success outer=3 setup=0.2ms solve=628.5ms rr=3.31e-12
+  [poisson3d-g48] FGMRES64[IR64<-32[FGMRES32[IR32<-16[FGMRES16(Jacobi16)]]]]: ok status=success outer=6 setup=0.2ms solve=720.1ms rr=4.38e-12
+  [poisson3d-g48] IR64<-32[FGMRES32^10[cast32<-16[FGMRES16^5[Rich16x2]]]]: ok status=success outer=3 setup=0.2ms solve=353.0ms rr=2.90e-11
+  tune F3R {'m2': 10, 'm3': 5, 'sweeps': 2}: ok outer=2 237ms
+  tune F3R {'m2': 10, 'm3': 5, 'sweeps': 4}: ok outer=2 235ms
+  tune F3R {'m2': 10, 'm3': 10, 'sweeps': 2}: ok outer=2 487ms
+  tune F3R {'m2': 10, 'm3': 10, 'sweeps': 4}: ok outer=2 510ms
+  tune F3R {'m2': 20, 'm3': 5, 'sweeps': 2}: ok outer=2 466ms
+  tune F3R {'m2': 20, 'm3': 5, 'sweeps': 4}: ok outer=2 493ms
+  tune F3R {'m2': 20, 'm3': 10, 'sweeps': 2}: ok outer=2 1008ms
+  tune F3R {'m2': 20, 'm3': 10, 'sweeps': 4}: ok outer=2 1059ms
+  tune F3R {'m2': 30, 'm3': 5, 'sweeps': 2}: ok outer=2 750ms
+  tune F3R {'m2': 30, 'm3': 5, 'sweeps': 4}: ok outer=2 791ms
+  tune F3R {'m2': 30, 'm3': 10, 'sweeps': 2}: ok outer=2 1566ms
+  tune F3R {'m2': 30, 'm3': 10, 'sweeps': 4}: ok outer=2 1661ms
+  tuned F3R: {'m2': 10, 'm3': 5, 'sweeps': 4}
+  tune hybrid {'m3': 5, 'mid_maxiter': 15}: ok outer=2 333ms
+  tune hybrid {'m3': 5, 'mid_maxiter': 10}: ok outer=2 335ms
+  tune hybrid {'m3': 8, 'mid_maxiter': 10}: ok outer=2 387ms
+  tuned hybrid: {'m3': 5, 'mid_maxiter': 15}
+  tune hierarchy {}: ok outer=1 265ms
+  tune hierarchy {'J_outer': 1, 'J_inner': 1, 'mid_tol': 0.001, 'mid_restart': 10, 'mid_maxiter': 10, 'leaf_tol': 0.1, 'leaf_restart': 5, 'leaf_maxiter': 5}: ok outer=4 390ms
+  tune hierarchy {'J_outer': 2, 'J_inner': 1, 'mid_tol': 0.001, 'mid_restart': 10, 'mid_maxiter': 20, 'leaf_tol': 0.1, 'leaf_restart': 8, 'leaf_maxiter': 8}: ok outer=2 369ms
+  tune hierarchy {'J_outer': 1, 'J_inner': 1, 'mid_tol': 0.0001, 'mid_restart': 15, 'mid_maxiter': 15, 'leaf_tol': 0.05, 'leaf_restart': 6, 'leaf_maxiter': 6}: ok outer=3 319ms
+  tuned hierarchy: {}
+  tune IR-topped {'m2': 10, 'm3': 5, 'sweeps': 2}: ok outer=2 217ms
+  tune IR-topped {'m2': 10, 'm3': 8, 'sweeps': 2}: ok outer=2 367ms
+  tune IR-topped {'m2': 15, 'm3': 5, 'sweeps': 2}: ok outer=2 340ms
+  tune IR-topped {'m2': 15, 'm3': 8, 'sweeps': 2}: ok outer=2 563ms
+  tune IR-topped {'m2': 20, 'm3': 5, 'sweeps': 2}: ok outer=2 469ms
+  tune IR-topped {'m2': 20, 'm3': 8, 'sweeps': 2}: ok outer=2 766ms
+  tuned IR-topped: {'m2': 10, 'm3': 5, 'sweeps': 2}
+  [convdiff3d-g32-w20] FGMRES64(Jacobi64): ok status=success outer=128 setup=0.1ms solve=449.1ms rr=9.56e-11
+  [convdiff3d-g32-w20] F3R: FGMRES64[FGMRES32^10[FGMRES16^5[Rich16x4]]]: ok status=success outer=2 setup=0.2ms solve=233.7ms rr=7.64e-15
+  [convdiff3d-g32-w20] hybrid: FGMRES64[IR64<-32[FGMRES32[cast32<-16[FGMRES16^5]]]]: ok status=success outer=2 setup=0.2ms solve=336.8ms rr=1.49e-16
+  [convdiff3d-g32-w20] FGMRES64[IR64<-32[FGMRES32[IR32<-16[FGMRES16(Jacobi16)]]]]: ok status=success outer=1 setup=0.2ms solve=259.2ms rr=3.87e-11
+  [convdiff3d-g32-w20] IR64<-32[FGMRES32^10[cast32<-16[FGMRES16^5[Rich16x2]]]]: ok status=success outer=2 setup=0.2ms solve=218.7ms rr=1.61e-14
+  [convdiff3d-g48-w20] FGMRES64(Jacobi64): ok status=success outer=173 setup=0.2ms solve=601.2ms rr=9.34e-11
+  [convdiff3d-g48-w20] F3R: FGMRES64[FGMRES32^10[FGMRES16^5[Rich16x4]]]: ok status=success outer=2 setup=1.5ms solve=249.9ms rr=8.09e-15
+  [convdiff3d-g48-w20] hybrid: FGMRES64[IR64<-32[FGMRES32[cast32<-16[FGMRES16^5]]]]: ok status=success outer=2 setup=0.2ms solve=542.3ms rr=3.14e-16
+  [convdiff3d-g48-w20] FGMRES64[IR64<-32[FGMRES32[IR32<-16[FGMRES16(Jacobi16)]]]]: ok status=success outer=1 setup=0.2ms solve=448.6ms rr=2.38e-11
+  [convdiff3d-g48-w20] IR64<-32[FGMRES32^10[cast32<-16[FGMRES16^5[Rich16x2]]]]: ok status=success outer=2 setup=0.2ms solve=233.7ms rr=1.35e-13
+wrote results\f3r.json (22 records)
+=== f3r done in 245.0s ===

@@ -1,0 +1,13 @@
+  [dense-nonsym-n2048-k1e+10] LU64 (direct): ok success outer=1 setup=25.2 solve=1.0 rr=8.7e-15 fe=1.2e-06 bn=2.4e-16 bc=1.4e-15 acc/rej=-/- zg=0
+  [dense-nonsym-n2048-k1e+10] FGMRES64(LU64): ok success outer=1 setup=23.1 solve=2.7 rr=9.1e-15 fe=9.9e-07 bn=1.9e-16 bc=1.1e-15 acc/rej=-/- zg=0
+  [dense-nonsym-n2048-k1e+10] IR64<-32[LU32 | LU64 fallback]: ok success outer=3 setup=27.7 solve=6.1 rr=4.7e-13 fe=2.4e-05 bn=8.3e-15 bc=5.4e-14 acc/rej=2/1 zg=0
+  [dense-nonsym-n2048-k1e+10] IR64<-32[LU32 | LU64 fallback] damped rho=0.9: ok success outer=3 setup=27.5 solve=6.9 rr=3.9e-13 fe=2.5e-05 bn=9.0e-15 bc=4.8e-14 acc/rej=2/1 zg=0
+  [dense-nonsym-n2048-k1e+10] FGMRES64[IR64<-32[LU32|LU64 fb]|dir(LU64)] (ladder): ok success outer=2 setup=28.1 solve=12.7 rr=3.7e-13 fe=2.1e-05 bn=6.8e-15 bc=4.5e-14 acc/rej=2/2 zg=0
+  [dense-nonsym-n2048-k1e+10] FGMRES64[IR64<-32[LU32|LU64 fb]|dir(LU64)] (ladder) damped: ok success outer=4 setup=27.6 solve=31.0 rr=4.0e-12 fe=2.2e-04 bn=7.7e-14 bc=5.2e-13 acc/rej=8/0 zg=1
+  [dense-nonsym-n2048-k1e+12] LU64 (direct): ok success outer=1 setup=22.5 solve=0.9 rr=9.9e-15 fe=1.2e-04 bn=3.2e-16 bc=1.8e-15 acc/rej=-/- zg=0
+  [dense-nonsym-n2048-k1e+12] FGMRES64(LU64): ok success outer=1 setup=23.0 solve=3.1 rr=1.2e-14 fe=1.0e-04 bn=2.4e-16 bc=1.4e-15 acc/rej=-/- zg=0
+  [dense-nonsym-n2048-k1e+12] IR64<-32[LU32 | LU64 fallback]: ok success outer=3 setup=27.9 solve=7.4 rr=1.9e-12 fe=1.0e-02 bn=4.0e-14 bc=2.4e-13 acc/rej=2/1 zg=0
+  [dense-nonsym-n2048-k1e+12] IR64<-32[LU32 | LU64 fallback] damped rho=0.9: ok success outer=3 setup=28.0 solve=6.9 rr=2.0e-12 fe=1.1e-02 bn=4.9e-14 bc=2.8e-13 acc/rej=2/1 zg=0
+  [dense-nonsym-n2048-k1e+12] FGMRES64[IR64<-32[LU32|LU64 fb]|dir(LU64)] (ladder): ok success outer=2 setup=27.4 solve=11.9 rr=1.1e-12 fe=5.6e-03 bn=2.5e-14 bc=1.6e-13 acc/rej=2/2 zg=0
+  [dense-nonsym-n2048-k1e+12] FGMRES64[IR64<-32[LU32|LU64 fb]|dir(LU64)] (ladder) damped: ok success outer=10 setup=27.7 solve=76.9 rr=3.0e-12 fe=1.6e-02 bn=6.3e-14 bc=3.8e-13 acc/rej=20/0 zg=1
+wrote results\dense_ic_noboost.json (12 records)

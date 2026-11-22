@@ -1,0 +1,23 @@
+=== multirhs  ===
+  [dense-nonsym-n4096-k1e+02] LU64 (direct): ok status=success outer=1 setup=122.1ms solve=1.8ms rr=1.19e-13
+  [dense-nonsym-n4096-k1e+02] FGMRES64(LU64): ok status=success outer=1 setup=121.8ms solve=5.0ms rr=1.12e-13
+  [dense-nonsym-n4096-k1e+02] IR64<-32[LU32] (plain IR): ok status=success outer=3 setup=14.9ms solve=9.8ms rr=8.90e-13
+  [dense-nonsym-n4096-k1e+02] FGMRES64[IR64<-32[LU32]]: ok status=success outer=1 setup=14.8ms solve=12.3ms rr=9.14e-13
+  [dense-nonsym-n4096-k1e+02] FGMRES64[IR64<-32[FGMRES32[IR32<-16[INV16]]]]: ok status=success outer=1 setup=458.3ms solve=25.1ms rr=2.75e-11
+  [dense-nonsym-n4096-k1e+02] LU64 (direct): ok status=success outer=1 setup=121.7ms solve=5.0ms rr=1.36e-13
+  [dense-nonsym-n4096-k1e+02] FGMRES64(LU64): ok status=success outer=1 setup=121.9ms solve=17.9ms rr=1.22e-13
+  [dense-nonsym-n4096-k1e+02] IR64<-32[LU32] (plain IR): ok status=success outer=3 setup=14.4ms solve=25.2ms rr=4.17e-13
+  [dense-nonsym-n4096-k1e+02] FGMRES64[IR64<-32[LU32]]: ok status=success outer=2 setup=14.7ms solve=57.1ms rr=9.45e-13
+  [dense-nonsym-n4096-k1e+02] FGMRES64[IR64<-32[FGMRES32[IR32<-16[INV16]]]]: ok status=success outer=1 setup=458.2ms solve=93.2ms rr=2.78e-11
+  [dense-nonsym-n4096-k1e+02] LU64 (direct): ok status=success outer=1 setup=122.1ms solve=6.5ms rr=1.47e-13
+  [dense-nonsym-n4096-k1e+02] FGMRES64(LU64): ok status=success outer=1 setup=121.8ms solve=33.2ms rr=1.29e-13
+  [dense-nonsym-n4096-k1e+02] IR64<-32[LU32] (plain IR): ok status=success outer=3 setup=14.3ms solve=28.6ms rr=4.29e-13
+  [dense-nonsym-n4096-k1e+02] FGMRES64[IR64<-32[LU32]]: ok status=success outer=2 setup=14.2ms solve=105.6ms rr=9.48e-13
+  [dense-nonsym-n4096-k1e+02] FGMRES64[IR64<-32[FGMRES32[IR32<-16[INV16]]]]: ok status=success outer=1 setup=458.5ms solve=222.7ms rr=2.78e-11
+  [dense-nonsym-n4096-k1e+02] LU64 (direct): ok status=success outer=1 setup=122.2ms solve=8.6ms rr=1.47e-13
+  [dense-nonsym-n4096-k1e+02] FGMRES64(LU64): ok status=success outer=1 setup=121.9ms solve=62.5ms rr=1.29e-13
+  [dense-nonsym-n4096-k1e+02] IR64<-32[LU32] (plain IR): ok status=success outer=3 setup=15.1ms solve=31.1ms rr=1.90e-13
+  [dense-nonsym-n4096-k1e+02] FGMRES64[IR64<-32[LU32]]: ok status=success outer=2 setup=14.9ms solve=230.6ms rr=9.48e-13
+  [dense-nonsym-n4096-k1e+02] FGMRES64[IR64<-32[FGMRES32[IR32<-16[INV16]]]]: ok status=success outer=1 setup=458.9ms solve=430.0ms rr=2.98e-11
+wrote results\multirhs.json (20 records)
+=== multirhs done in 29.5s ===

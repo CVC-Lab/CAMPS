@@ -1,0 +1,109 @@
+=== dense_wc  ===
+  [dense-nonsym-n2048-k1e+02] LU64 (direct): ok status=success outer=1 setup=24.5ms solve=0.8ms rr=3.96e-14
+  [dense-nonsym-n2048-k1e+02] FGMRES64(LU64): ok status=success outer=1 setup=22.1ms solve=2.8ms rr=4.21e-14
+  [dense-nonsym-n2048-k1e+02] IR64<-32[LU32] (plain IR): ok status=success outer=3 setup=5.1ms solve=8.2ms rr=5.85e-14
+  [dense-nonsym-n2048-k1e+02] FGMRES64[IR64<-32[LU32]]: ok status=success outer=2 setup=5.8ms solve=14.9ms rr=3.46e-16
+  [dense-nonsym-n2048-k1e+02] FGMRES64[IR64<-32[FGMRES32[IR32<-16[INV16]]]]: ok status=success outer=1 setup=69.6ms solve=20.6ms rr=2.77e-11
+  [dense-nonsym-n2048-k1e+02] FGMRES64[IR64<-32[FGMRES32[IR32<-b16[INVb16]]]]: ok status=success outer=1 setup=69.7ms solve=41.0ms rr=1.99e-13
+  [dense-nonsym-n4096-k1e+02] LU64 (direct): ok status=success outer=1 setup=121.8ms solve=2.0ms rr=1.04e-13
+  [dense-nonsym-n4096-k1e+02] FGMRES64(LU64): ok status=success outer=1 setup=121.8ms solve=4.3ms rr=1.09e-13
+  [dense-nonsym-n4096-k1e+02] IR64<-32[LU32] (plain IR): ok status=success outer=3 setup=15.3ms solve=11.4ms rr=8.58e-13
+  [dense-nonsym-n4096-k1e+02] FGMRES64[IR64<-32[LU32]]: ok status=success outer=2 setup=14.5ms solve=18.4ms rr=3.68e-16
+  [dense-nonsym-n4096-k1e+02] FGMRES64[IR64<-32[FGMRES32[IR32<-16[INV16]]]]: ok status=success outer=1 setup=458.1ms solve=23.5ms rr=2.65e-11
+  [dense-nonsym-n4096-k1e+02] FGMRES64[IR64<-32[FGMRES32[IR32<-b16[INVb16]]]]: ok status=success outer=1 setup=458.1ms solve=39.5ms rr=9.20e-13
+  [dense-nonsym-n8192-k1e+02] LU64 (direct): ok status=success outer=1 setup=864.2ms solve=4.1ms rr=2.81e-13
+  [dense-nonsym-n8192-k1e+02] FGMRES64(LU64): ok status=success outer=1 setup=867.8ms solve=11.5ms rr=2.84e-13
+  [dense-nonsym-n8192-k1e+02] IR64<-32[LU32] (plain IR): ok status=success outer=3 setup=69.6ms solve=21.1ms rr=1.23e-11
+  [dense-nonsym-n8192-k1e+02] FGMRES64[IR64<-32[LU32]]: ok status=success outer=1 setup=65.9ms solve=28.7ms rr=1.19e-11
+wrote results\dense_wc.json (16 records)
+=== dense_wc done in 38.8s ===
+=== dense_ic  ===
+  [dense-nonsym-n2048-k1e+04] LU64 (direct): ok status=success outer=1 setup=22.6ms solve=0.9ms rr=2.28e-14
+  [dense-nonsym-n2048-k1e+04] FGMRES64(LU64): ok status=success outer=1 setup=22.6ms solve=3.1ms rr=2.31e-14
+  [dense-nonsym-n2048-k1e+04] IR64<-32[LU32] (plain IR): ok status=success outer=3 setup=5.4ms solve=8.0ms rr=1.56e-11
+  [dense-nonsym-n2048-k1e+04] FGMRES64[IR64<-32[LU32]]: ok status=success outer=1 setup=5.2ms solve=10.1ms rr=1.78e-11
+  [dense-nonsym-n2048-k1e+06] LU64 (direct): ok status=success outer=1 setup=22.7ms solve=1.3ms rr=1.69e-14
+  [dense-nonsym-n2048-k1e+06] FGMRES64(LU64): ok status=success outer=1 setup=22.8ms solve=4.1ms rr=1.68e-14
+  [dense-nonsym-n2048-k1e+06] IR64<-32[LU32] (plain IR): ok status=success outer=5 setup=6.1ms solve=19.8ms rr=4.57e-11
+  [dense-nonsym-n2048-k1e+06] FGMRES64[IR64<-32[LU32]]: ok status=success outer=2 setup=5.8ms solve=23.8ms rr=2.22e-12
+  [dense-nonsym-n2048-k1e+07] LU64 (direct): ok status=success outer=1 setup=22.7ms solve=1.3ms rr=1.44e-14
+  [dense-nonsym-n2048-k1e+07] FGMRES64(LU64): ok status=success outer=1 setup=22.8ms solve=4.9ms rr=1.42e-14
+  [dense-nonsym-n2048-k1e+07] IR64<-32[LU32] (plain IR): ok status=success outer=13 setup=6.0ms solve=55.9ms rr=6.52e-11
+  [dense-nonsym-n2048-k1e+07] FGMRES64[IR64<-32[LU32]]: ok status=success outer=5 setup=6.8ms solve=56.8ms rr=5.68e-12
+  [dense-nonsym-n2048-k1e+08] LU64 (direct): ok status=success outer=1 setup=22.4ms solve=0.9ms rr=1.44e-14
+  [dense-nonsym-n2048-k1e+08] FGMRES64(LU64): ok status=success outer=1 setup=22.2ms solve=2.9ms rr=1.31e-14
+  [dense-nonsym-n2048-k1e+08] IR64<-32[LU32] (plain IR): DNC status=rejected outer=2 setup=5.1ms solve=5.7ms rr=1.56e-03
+  [dense-nonsym-n2048-k1e+08] FGMRES64[IR64<-32[LU32]]: DNC status=max_steps outer=400 setup=5.2ms solve=4645.6ms rr=1.12e-04
+  [dense-nonsym-n2048-k1e+10] LU64 (direct): ok status=success outer=1 setup=22.0ms solve=0.8ms rr=8.65e-15
+  [dense-nonsym-n2048-k1e+10] FGMRES64(LU64): ok status=success outer=1 setup=22.0ms solve=2.3ms rr=9.13e-15
+  [dense-nonsym-n2048-k1e+10] IR64<-32[LU32] (plain IR): DNC status=rejected outer=2 setup=4.9ms solve=4.1ms rr=2.91e-04
+  [dense-nonsym-n2048-k1e+10] FGMRES64[IR64<-32[LU32]]: DNC status=max_steps outer=400 setup=4.8ms solve=2456.7ms rr=6.09e-05
+  [dense-nonsym-n2048-k1e+12] LU64 (direct): DNC status=success outer=1 setup=22.6ms solve=0.8ms rr=7.76e-09
+  [dense-nonsym-n2048-k1e+12] FGMRES64(LU64): ok status=success outer=111 setup=22.7ms solve=445.5ms rr=9.97e-11
+  [dense-nonsym-n2048-k1e+12] IR64<-32[LU32] (plain IR): DNC status=rejected outer=2 setup=4.9ms solve=4.1ms rr=9.84e-04
+  [dense-nonsym-n2048-k1e+12] FGMRES64[IR64<-32[LU32]]: DNC status=max_steps outer=400 setup=4.8ms solve=2449.5ms rr=1.94e-04
+wrote results\dense_ic.json (24 records)
+=== dense_ic done in 191.8s ===
+=== sparse_spd  ===
+experiments\matrices.py:157: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\SparseCsrTensorImpl.cpp:51.)
+  csr64 = torch.sparse_csr_tensor(crow, col, vals, size=(n, n))
+  [poisson3d-g32] CG64: ok status=success outer=130 setup=0.0ms solve=53.4ms rr=9.65e-11
+  [poisson3d-g32] CG64(Jacobi64): ok status=success outer=130 setup=0.1ms solve=77.2ms rr=9.65e-11
+  [poisson3d-g32] FGMRES64(Jacobi64): ok status=success outer=201 setup=0.1ms solve=719.0ms rr=9.64e-11
+  [poisson3d-g32] IR64<-32[CG32(Jacobi32)] (plain IR): ok status=success outer=3 setup=0.4ms solve=107.7ms rr=8.96e-13
+  [poisson3d-g32] FGMRES64[IR64<-32[CG32(Jacobi32)]]: ok status=success outer=2 setup=0.2ms solve=154.6ms rr=3.08e-16
+  [poisson3d-g32] FGMRES64[IR64<-32[FGMRES32[IR32<-16[FGMRES16(Jacobi16)]]]]: ok status=success outer=2 setup=0.5ms solve=921.3ms rr=2.07e-16
+  [poisson3d-g48] CG64: ok status=success outer=180 setup=0.0ms solve=73.6ms rr=9.42e-11
+  [poisson3d-g48] CG64(Jacobi64): ok status=success outer=180 setup=0.1ms solve=107.8ms rr=9.42e-11
+  [poisson3d-g48] FGMRES64(Jacobi64): ok status=success outer=292 setup=0.1ms solve=1028.2ms rr=9.84e-11
+  [poisson3d-g48] IR64<-32[CG32(Jacobi32)] (plain IR): ok status=success outer=3 setup=0.9ms solve=169.0ms rr=8.79e-13
+  [poisson3d-g48] FGMRES64[IR64<-32[CG32(Jacobi32)]]: ok status=success outer=2 setup=0.2ms solve=245.3ms rr=2.11e-16
+  [poisson3d-g48] FGMRES64[IR64<-32[FGMRES32[IR32<-16[FGMRES16(Jacobi16)]]]]: ok status=success outer=2 setup=0.9ms solve=1353.4ms rr=2.37e-16
+  [poisson3d-g64] CG64: ok status=success outer=236 setup=0.0ms solve=97.5ms rr=9.49e-11
+  [poisson3d-g64] CG64(Jacobi64): ok status=success outer=236 setup=0.1ms solve=154.2ms rr=9.49e-11
+  [poisson3d-g64] FGMRES64(Jacobi64): ok status=success outer=383 setup=0.1ms solve=1439.7ms rr=9.93e-11
+  [poisson3d-g64] IR64<-32[CG32(Jacobi32)] (plain IR): ok status=success outer=3 setup=1.6ms solve=217.9ms rr=8.91e-13
+  [poisson3d-g64] FGMRES64[IR64<-32[CG32(Jacobi32)]]: ok status=success outer=2 setup=0.2ms solve=319.0ms rr=5.85e-16
+  [poisson3d-g64] FGMRES64[IR64<-32[FGMRES32[IR32<-16[FGMRES16(Jacobi16)]]]]: ok status=success outer=2 setup=1.6ms solve=1584.4ms rr=2.42e-16
+wrote results\sparse_spd.json (18 records)
+=== sparse_spd done in 124.3s ===
+=== sparse_nsy  ===
+  [convdiff3d-g32-w2] GMRES64(Jacobi64): ok status=success outer=155 setup=0.2ms solve=530.1ms rr=9.81e-11
+  [convdiff3d-g32-w2] FGMRES64(Jacobi64): ok status=success outer=155 setup=0.2ms solve=555.0ms rr=9.81e-11
+  [convdiff3d-g32-w2] FGMRES64[IR64<-32[FGMRES32(Jacobi32)]]: ok status=success outer=2 setup=0.5ms solve=805.0ms rr=2.42e-16
+  [convdiff3d-g32-w2] FGMRES64[IR64<-32[FGMRES32[IR32<-16[FGMRES16(Jacobi16)]]]]: ok status=success outer=1 setup=0.5ms solve=357.9ms rr=1.35e-12
+  [convdiff3d-g32-w20] GMRES64(Jacobi64): ok status=success outer=122 setup=0.1ms solve=419.3ms rr=9.55e-11
+  [convdiff3d-g32-w20] FGMRES64(Jacobi64): ok status=success outer=122 setup=0.1ms solve=440.6ms rr=9.55e-11
+  [convdiff3d-g32-w20] FGMRES64[IR64<-32[FGMRES32(Jacobi32)]]: ok status=success outer=2 setup=0.5ms solve=578.0ms rr=3.21e-16
+  [convdiff3d-g32-w20] FGMRES64[IR64<-32[FGMRES32[IR32<-16[FGMRES16(Jacobi16)]]]]: ok status=success outer=1 setup=0.5ms solve=264.3ms rr=4.99e-11
+  [convdiff3d-g32-w100] GMRES64(Jacobi64): ok status=success outer=179 setup=0.1ms solve=625.1ms rr=8.44e-11
+  [convdiff3d-g32-w100] FGMRES64(Jacobi64): ok status=success outer=179 setup=0.1ms solve=648.0ms rr=8.44e-11
+  [convdiff3d-g32-w100] FGMRES64[IR64<-32[FGMRES32(Jacobi32)]]: ok status=success outer=2 setup=0.5ms solve=678.4ms rr=1.61e-16
+  [convdiff3d-g32-w100] FGMRES64[IR64<-32[FGMRES32[IR32<-16[FGMRES16(Jacobi16)]]]]: ok status=success outer=2 setup=0.5ms solve=544.9ms rr=2.54e-16
+  [convdiff3d-g48-w20] GMRES64(Jacobi64): ok status=success outer=175 setup=0.2ms solve=757.0ms rr=9.23e-11
+  [convdiff3d-g48-w20] FGMRES64(Jacobi64): ok status=success outer=175 setup=0.2ms solve=792.3ms rr=9.23e-11
+  [convdiff3d-g48-w20] FGMRES64[IR64<-32[FGMRES32(Jacobi32)]]: ok status=success outer=2 setup=1.1ms solve=1224.9ms rr=2.91e-16
+  [convdiff3d-g48-w20] FGMRES64[IR64<-32[FGMRES32[IR32<-16[FGMRES16(Jacobi16)]]]]: ok status=success outer=1 setup=1.1ms solve=535.9ms rr=3.00e-11
+wrote results\sparse_nsy.json (16 records)
+=== sparse_nsy done in 141.3s ===
+=== placement  ===
+  [dense-nonsym-n2048-k1e+02] FGMRES64[IR64<-32[INV32]]: ok status=success outer=1 setup=69.9ms solve=6.7ms rr=9.64e-12
+  [dense-nonsym-n2048-k1e+02] FGMRES64[IR64<-16[INV16]]: ok status=success outer=2 setup=70.0ms solve=28.3ms rr=5.30e-16
+  [dense-nonsym-n2048-k1e+02] FGMRES64[IR64<-b16[INVb16]]: ok status=success outer=2 setup=70.2ms solve=17.3ms rr=3.93e-11
+  [dense-nonsym-n2048-k1e+02] FGMRES64[IR64<-32[IR32<-16[INV16]]]: ok status=success outer=1 setup=70.2ms solve=26.8ms rr=2.59e-11
+  [dense-nonsym-n2048-k1e+02] FGMRES64[IR64<-32[FGMRES32[IR32<-16[INV16]]]]: ok status=success outer=1 setup=70.3ms solve=28.8ms rr=2.60e-11
+  [dense-nonsym-n2048-k1e+02] FGMRES64[IR64<-32[FGMRES32[IR32<-b16[INVb16]]]]: ok status=success outer=1 setup=70.1ms solve=29.4ms rr=1.90e-13
+  [dense-nonsym-n2048-k1e+04] FGMRES64[IR64<-32[INV32]]: ok status=success outer=1 setup=69.8ms solve=7.9ms rr=4.01e-12
+  [dense-nonsym-n2048-k1e+04] FGMRES64[IR64<-16[INV16]]: ok status=success outer=4 setup=69.8ms solve=31.7ms rr=3.09e-12
+  [dense-nonsym-n2048-k1e+04] FGMRES64[IR64<-b16[INVb16]]: ok status=success outer=60 setup=70.0ms solve=582.0ms rr=8.09e-11
+  [dense-nonsym-n2048-k1e+04] FGMRES64[IR64<-32[IR32<-16[INV16]]]: ok status=success outer=3 setup=70.1ms solve=42.5ms rr=2.97e-12
+  [dense-nonsym-n2048-k1e+04] FGMRES64[IR64<-32[FGMRES32[IR32<-16[INV16]]]]: ok status=success outer=1 setup=71.1ms solve=41.7ms rr=9.92e-12
+  [dense-nonsym-n2048-k1e+04] FGMRES64[IR64<-32[FGMRES32[IR32<-b16[INVb16]]]]: ok status=success outer=3 setup=71.0ms solve=857.6ms rr=5.93e-11
+  [dense-nonsym-n2048-k1e+06] FGMRES64[IR64<-32[INV32]]: ok status=success outer=2 setup=70.0ms solve=15.2ms rr=1.15e-12
+  [dense-nonsym-n2048-k1e+06] FGMRES64[IR64<-16[INV16]]: DNC status=max_steps outer=300 setup=70.1ms solve=1697.9ms rr=9.20e-01
+  [dense-nonsym-n2048-k1e+06] FGMRES64[IR64<-b16[INVb16]]: DNC status=max_steps outer=300 setup=70.0ms solve=1806.1ms rr=9.20e-01
+  [dense-nonsym-n2048-k1e+06] FGMRES64[IR64<-32[IR32<-16[INV16]]]: DNC status=max_steps outer=300 setup=70.0ms solve=3698.3ms rr=9.20e-01
+  [dense-nonsym-n2048-k1e+06] FGMRES64[IR64<-32[FGMRES32[IR32<-16[INV16]]]]: DNC status=max_steps outer=300 setup=69.9ms solve=61964.0ms rr=8.58e-01
+  [dense-nonsym-n2048-k1e+06] FGMRES64[IR64<-32[FGMRES32[IR32<-b16[INVb16]]]]: DNC status=max_steps outer=300 setup=70.0ms solve=64135.9ms rr=8.58e-01
+wrote results\placement.json (18 records)
+=== placement done in 2431.8s ===

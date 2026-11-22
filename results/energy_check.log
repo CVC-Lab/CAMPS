@@ -1,0 +1,41 @@
+﻿python : experiments\matrices.py:157: UserWarning: Sparse invariant checks are 
+implicitly disabled. Memory errors (e.g. SEGFAULT) will occur when operating on a sparse tensor which violates the 
+invariants, but checks incur performance overhead. To silence this warning, explicitly opt in or out. See 
+`torch.sparse.check_sparse_tensor_invariants.__doc__` for guidance.  (Triggered internally at 
+C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\Context.cpp:767.)
+At line:1 char:515
++ ... DE -ne 0) { exit 1 }; python -m experiments.energy_check 2>&1 | Tee-O ...
++                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (...ntext.cpp:767.):String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  csr64 = torch.sparse_csr_tensor(crow, col, vals, size=(n, n))
+experiments\matrices.py:157: UserWarning: Sparse CSR tensor support is in beta 
+state. If you miss a functionality in the sparse tensor support, please submit a feature request to 
+https://github.com/pytorch/pytorch/issues. (Triggered internally at 
+C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\SparseCsrTensorImpl.cpp:51.)
+  csr64 = torch.sparse_csr_tensor(crow, col, vals, size=(n, n))
+counterexample: {
+ "y": 9007199254740992.0,
+ "g": 9007199254740994.0,
+ "r": 2.0,
+ "d": 0.25,
+ "y_new_equals_y": true,
+ "proposed_step_expression": -0.46875,
+ "proposed_step_accepts": true,
+ "committed_h": 0.0,
+ "dphi_hat": 0.0,
+ "bound": 0.0,
+ "certified_test_accepts": false
+}
+g32_residual: {'converged': True, 'status': 'success', 'corrections': 3, 'accepted': 3, 'rejected': 0, 'solve_ms': 118.42270009219646, 'rel_res': 8.962146821798381e-13, 'eta_hat_median': 9.635902666349889e-05, 'matvecs': {'fp64': {'matvec': 5, 'matmat_cols': 0}, 'fp32': {'matvec': 347, 'matmat_cols': 0}}}
+g32_energy: {'converged': True, 'status': 'success', 'corrections': 3, 'accepted': 3, 'rejected': 0, 'solve_ms': 150.71985009126365, 'rel_res': 8.962146821798381e-13, 'eta_hat_median': 9.635902666349889e-05, 'matvecs': {'fp64': {'matvec': 8, 'matmat_cols': 0, 'absmatvec': 6}, 'fp32': {'matvec': 347, 'matmat_cols': 0}}}
+   t=0: dphi_hat=-3.025e+00 bound=5.795e-11 bound/|dphi|=1.92e-11 accepted=1.0
+   t=1: dphi_hat=-4.723e-07 bound=1.181e-15 bound/|dphi|=2.50e-09 accepted=1.0
+   t=2: dphi_hat=-2.003e-15 bound=1.605e-21 bound/|dphi|=8.02e-07 accepted=1.0
+g48_residual: {'converged': True, 'status': 'success', 'corrections': 3, 'accepted': 3, 'rejected': 0, 'solve_ms': 201.8907000310719, 'rel_res': 8.789723858738929e-13, 'eta_hat_median': 9.579582391380062e-05, 'matvecs': {'fp64': {'matvec': 5, 'matmat_cols': 0}, 'fp32': {'matvec': 529, 'matmat_cols': 0}}}
+g48_energy: {'converged': True, 'status': 'success', 'corrections': 3, 'accepted': 3, 'rejected': 0, 'solve_ms': 225.663400022313, 'rel_res': 8.789723858738929e-13, 'eta_hat_median': 9.579582391380062e-05, 'matvecs': {'fp64': {'matvec': 8, 'matmat_cols': 0, 'absmatvec': 6}, 'fp32': {'matvec': 529, 'matmat_cols': 0}}}
+   t=0: dphi_hat=-3.003e+00 bound=1.941e-10 bound/|dphi|=6.47e-11 accepted=1.0
+   t=1: dphi_hat=-3.509e-07 bound=1.934e-15 bound/|dphi|=5.51e-09 accepted=1.0
+   t=2: dphi_hat=-3.178e-15 bound=3.157e-21 bound/|dphi|=9.93e-07 accepted=1.0
+wrote results\spd_energy_check.json

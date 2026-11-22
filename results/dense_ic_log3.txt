@@ -1,0 +1,45 @@
+=== dense_ic  ===
+  [dense-nonsym-n2048-k1e+04] LU64 (direct): ok status=success outer=1 setup=24.4ms solve=0.9ms rr=2.28e-14
+  [dense-nonsym-n2048-k1e+04] FGMRES64(LU64): ok status=success outer=1 setup=24.3ms solve=2.4ms rr=2.31e-14
+  [dense-nonsym-n2048-k1e+04] IR64<-32[LU32] (plain IR): ok status=success outer=3 setup=5.1ms solve=6.3ms rr=1.56e-11
+  [dense-nonsym-n2048-k1e+04] FGMRES64[IR64<-32[LU32]]: ok status=success outer=1 setup=4.9ms solve=7.7ms rr=1.78e-11
+  [dense-nonsym-n2048-k1e+04] FGMRES64[IR64<-32[LU32]] (loose): ok status=success outer=1 setup=4.8ms solve=7.9ms rr=1.78e-11
+  [dense-nonsym-n2048-k1e+04] IR64<-32[LU32 | LU64 fallback]: ok status=success outer=3 setup=26.8ms solve=6.0ms rr=1.56e-11
+  [dense-nonsym-n2048-k1e+04] FGMRES64[IR64<-32[LU32|LU64 fb]|dir(LU64)] (ladder): ok status=success outer=2 setup=26.7ms solve=10.9ms rr=1.66e-14
+  [dense-nonsym-n2048-k1e+06] LU64 (direct): ok status=success outer=1 setup=21.8ms solve=0.8ms rr=1.69e-14
+  [dense-nonsym-n2048-k1e+06] FGMRES64(LU64): ok status=success outer=1 setup=21.9ms solve=2.3ms rr=1.68e-14
+  [dense-nonsym-n2048-k1e+06] IR64<-32[LU32] (plain IR): ok status=success outer=5 setup=4.9ms solve=10.1ms rr=4.57e-11
+  [dense-nonsym-n2048-k1e+06] FGMRES64[IR64<-32[LU32]]: ok status=success outer=2 setup=4.9ms solve=15.5ms rr=2.22e-12
+  [dense-nonsym-n2048-k1e+06] FGMRES64[IR64<-32[LU32]] (loose): ok status=success outer=2 setup=4.8ms solve=14.8ms rr=2.22e-12
+  [dense-nonsym-n2048-k1e+06] IR64<-32[LU32 | LU64 fallback]: ok status=success outer=5 setup=26.9ms solve=10.2ms rr=4.57e-11
+  [dense-nonsym-n2048-k1e+06] FGMRES64[IR64<-32[LU32|LU64 fb]|dir(LU64)] (ladder): ok status=success outer=3 setup=26.8ms solve=16.5ms rr=2.27e-12
+  [dense-nonsym-n2048-k1e+07] LU64 (direct): ok status=success outer=1 setup=21.8ms solve=0.8ms rr=1.44e-14
+  [dense-nonsym-n2048-k1e+07] FGMRES64(LU64): ok status=success outer=1 setup=21.9ms solve=2.2ms rr=1.42e-14
+  [dense-nonsym-n2048-k1e+07] IR64<-32[LU32] (plain IR): ok status=success outer=13 setup=4.9ms solve=25.6ms rr=6.52e-11
+  [dense-nonsym-n2048-k1e+07] FGMRES64[IR64<-32[LU32]]: ok status=success outer=5 setup=4.9ms solve=38.3ms rr=5.68e-12
+  [dense-nonsym-n2048-k1e+07] FGMRES64[IR64<-32[LU32]] (loose): ok status=success outer=5 setup=5.2ms solve=40.4ms rr=5.68e-12
+  [dense-nonsym-n2048-k1e+07] IR64<-32[LU32 | LU64 fallback]: ok status=success outer=13 setup=27.2ms solve=25.6ms rr=6.52e-11
+  [dense-nonsym-n2048-k1e+07] FGMRES64[IR64<-32[LU32|LU64 fb]|dir(LU64)] (ladder): ok status=success outer=7 setup=26.9ms solve=39.1ms rr=1.24e-11
+  [dense-nonsym-n2048-k1e+08] LU64 (direct): ok status=success outer=1 setup=21.9ms solve=0.8ms rr=1.44e-14
+  [dense-nonsym-n2048-k1e+08] FGMRES64(LU64): ok status=success outer=1 setup=21.9ms solve=2.3ms rr=1.31e-14
+  [dense-nonsym-n2048-k1e+08] IR64<-32[LU32] (plain IR): DNC status=rejected outer=2 setup=5.0ms solve=4.3ms rr=1.56e-03
+  [dense-nonsym-n2048-k1e+08] FGMRES64[IR64<-32[LU32]]: DNC status=max_steps outer=400 setup=4.9ms solve=2520.7ms rr=1.12e-04
+  [dense-nonsym-n2048-k1e+08] FGMRES64[IR64<-32[LU32]] (loose): DNC status=max_steps outer=400 setup=5.0ms solve=3947.5ms rr=1.51e-02
+  [dense-nonsym-n2048-k1e+08] IR64<-32[LU32 | LU64 fallback]: ok status=success outer=3 setup=27.1ms solve=6.3ms rr=2.28e-12
+  [dense-nonsym-n2048-k1e+08] FGMRES64[IR64<-32[LU32|LU64 fb]|dir(LU64)] (ladder): ok status=success outer=2 setup=27.0ms solve=12.3ms rr=4.82e-13
+  [dense-nonsym-n2048-k1e+10] LU64 (direct): ok status=success outer=1 setup=22.1ms solve=0.9ms rr=8.65e-15
+  [dense-nonsym-n2048-k1e+10] FGMRES64(LU64): ok status=success outer=1 setup=22.0ms solve=2.6ms rr=9.13e-15
+  [dense-nonsym-n2048-k1e+10] IR64<-32[LU32] (plain IR): DNC status=rejected outer=2 setup=5.2ms solve=4.9ms rr=2.91e-04
+  [dense-nonsym-n2048-k1e+10] FGMRES64[IR64<-32[LU32]]: DNC status=max_steps outer=400 setup=5.0ms solve=3227.7ms rr=6.09e-05
+  [dense-nonsym-n2048-k1e+10] FGMRES64[IR64<-32[LU32]] (loose): DNC status=max_steps outer=400 setup=5.0ms solve=3895.1ms rr=5.21e-03
+  [dense-nonsym-n2048-k1e+10] IR64<-32[LU32 | LU64 fallback]: ok status=success outer=3 setup=27.1ms solve=6.8ms rr=4.69e-13
+  [dense-nonsym-n2048-k1e+10] FGMRES64[IR64<-32[LU32|LU64 fb]|dir(LU64)] (ladder): ok status=success outer=2 setup=27.1ms solve=12.0ms rr=3.70e-13
+  [dense-nonsym-n2048-k1e+12] LU64 (direct): DNC status=success outer=1 setup=22.7ms solve=0.9ms rr=7.76e-09
+  [dense-nonsym-n2048-k1e+12] FGMRES64(LU64): ok status=success outer=111 setup=22.9ms solve=559.6ms rr=9.97e-11
+  [dense-nonsym-n2048-k1e+12] IR64<-32[LU32] (plain IR): DNC status=rejected outer=2 setup=4.9ms solve=5.2ms rr=9.84e-04
+  [dense-nonsym-n2048-k1e+12] FGMRES64[IR64<-32[LU32]]: DNC status=max_steps outer=400 setup=5.3ms solve=2456.3ms rr=1.94e-04
+  [dense-nonsym-n2048-k1e+12] FGMRES64[IR64<-32[LU32]] (loose): DNC status=max_steps outer=400 setup=4.9ms solve=3071.2ms rr=1.16e-02
+  [dense-nonsym-n2048-k1e+12] IR64<-32[LU32 | LU64 fallback]: DNC status=stagnated outer=32 setup=27.2ms solve=41.6ms rr=9.13e-07
+  [dense-nonsym-n2048-k1e+12] FGMRES64[IR64<-32[LU32|LU64 fb]|dir(LU64)] (ladder): ok status=success outer=330 setup=27.6ms solve=1422.5ms rr=8.89e-11
+wrote results\dense_ic.json (42 records)
+=== dense_ic done in 425.6s ===

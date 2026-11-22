@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering
+\small
+\caption{sparse_nsy: convdiff3d-g32-w2. Median over 10 timed runs after 3 warmups; times in ms.}
+\label{tab:sparse_nsy-convdiff3d-g32-w2}
+\begin{tabular}{lrrrrlrr}
+\hline
+Method & Setup & Solve & Total & Outer & Status & $\|b-Ax\|_2/\|b\|_2$ & Mem (MiB) \\
+\hline
+$\mathrm{GMRES}_{64}(\mathrm{Jacobi}_{64})$ & 0.2 & 530.1 & 530.3 & 155 & converged & 9.81e-11 & 9.5 \\
+$\mathrm{FGMRES}_{64}(\mathrm{Jacobi}_{64})$ & 0.2 & 555.0 & 555.2 & 155 & converged & 9.81e-11 & 17.0 \\
+$\mathrm{FGMRES}_{64}[\mathrm{IR}_{64\leftarrow 32}[\mathrm{FGMRES}_{32}(\mathrm{Jacobi}_{32})]]$ & 0.5 & 805.0 & 805.4 & 2 & converged & 2.42e-16 & 25.4 \\
+$\mathrm{FGMRES}_{64}[\mathrm{IR}_{64\leftarrow 32}[\mathrm{FGMRES}_{32}[\mathrm{IR}_{32\leftarrow 16}[\mathrm{FGMRES}_{16}(\mathrm{Jacobi}_{16})]]]]$ & 0.5 & 357.9 & 358.4 & 1 & converged & 1.35e-12 & 24.7 \\
+\hline
+\end{tabular}
+\end{table}

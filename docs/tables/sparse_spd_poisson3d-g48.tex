@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering
+\small
+\caption{sparse_spd: poisson3d-g48. Median over 10 timed runs after 3 warmups; times in ms.}
+\label{tab:sparse_spd-poisson3d-g48}
+\begin{tabular}{lrrrrlrr}
+\hline
+Method & Setup & Solve & Total & Outer & Status & $\|b-Ax\|_2/\|b\|_2$ & Mem (MiB) \\
+\hline
+$\mathrm{CG}_{64}$ & 0.0 & 73.6 & 73.6 & 180 & converged & 9.42e-11 & 9.2 \\
+$\mathrm{CG}_{64}(\mathrm{Jacobi}_{64})$ & 0.1 & 107.8 & 107.9 & 180 & converged & 9.42e-11 & 9.2 \\
+$\mathrm{FGMRES}_{64}(\mathrm{Jacobi}_{64})$ & 0.1 & 1028.2 & 1028.3 & 292 & converged & 9.84e-11 & 57.3 \\
+$\mathrm{IR}_{64\leftarrow 32}[\mathrm{CG}_{32}(\mathrm{Jacobi}_{32})]\ \text{(plain IR)}$ & 0.9 & 169.0 & 169.9 & 3 & converged & 8.79e-13 & 8.7 \\
+$\mathrm{FGMRES}_{64}[\mathrm{IR}_{64\leftarrow 32}[\mathrm{CG}_{32}(\mathrm{Jacobi}_{32})]]$ & 0.2 & 245.3 & 245.5 & 2 & converged & 2.11e-16 & 60.2 \\
+$\mathrm{FGMRES}_{64}[\mathrm{IR}_{64\leftarrow 32}[\mathrm{FGMRES}_{32}[\mathrm{IR}_{32\leftarrow 16}[\mathrm{FGMRES}_{16}(\mathrm{Jacobi}_{16})]]]]$ & 0.9 & 1353.4 & 1354.3 & 2 & converged & 2.37e-16 & 83.3 \\
+\hline
+\end{tabular}
+\end{table}

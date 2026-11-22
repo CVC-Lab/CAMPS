@@ -1,0 +1,176 @@
+{
+ "1e+04": {
+  "boosted_pivots_LU32": 0,
+  "boosted_pivots_LU64": 0,
+  "lu64_noboost": {
+   "converged": true,
+   "rel_res": 2.2846988897750268e-14,
+   "fwd": 6.186343279965505e-12,
+   "bn": 7.233899495798362e-16,
+   "bc": 3.261197372221725e-15,
+   "solve_ms": 1.0605000425130129,
+   "setup_ms": 23.423600010573864
+  },
+  "fallback_damped_rho0.9": {
+   "converged": true,
+   "status": "success",
+   "corrections": 3,
+   "solve_ms": 14.314500149339437,
+   "setup_ms": 29.354299884289503,
+   "rel_res": 1.9005739862832514e-11,
+   "fwd": 2.45565316919059e-09,
+   "bn": 4.706612940310174e-13,
+   "bc": 2.414471676416006e-12,
+   "accepted": 3,
+   "rejected": 0,
+   "eta_hat_median": 0.0007949800489954761
+  }
+ },
+ "1e+06": {
+  "boosted_pivots_LU32": 0,
+  "boosted_pivots_LU64": 0,
+  "lu64_noboost": {
+   "converged": true,
+   "rel_res": 1.6882349487182654e-14,
+   "fwd": 3.6340061245548413e-10,
+   "bn": 5.461474934331105e-16,
+   "bc": 2.698278087395194e-15,
+   "solve_ms": 1.170499948784709,
+   "setup_ms": 23.75150006264448
+  },
+  "fallback_damped_rho0.9": {
+   "converged": true,
+   "status": "success",
+   "corrections": 5,
+   "solve_ms": 23.009900003671646,
+   "setup_ms": 29.28219991736114,
+   "rel_res": 4.659530705726594e-11,
+   "fwd": 4.448677367821133e-07,
+   "bn": 1.2294336107374655e-12,
+   "bc": 6.174029911043742e-12,
+   "accepted": 5,
+   "rejected": 0,
+   "eta_hat_median": 0.035727309571521156
+  }
+ },
+ "1e+07": {
+  "boosted_pivots_LU32": 0,
+  "boosted_pivots_LU64": 0,
+  "lu64_noboost": {
+   "converged": true,
+   "rel_res": 1.4393776484454042e-14,
+   "fwd": 1.9879187064171306e-09,
+   "bn": 3.4656437886796676e-16,
+   "bc": 1.8775402431348852e-15,
+   "solve_ms": 1.2552998960018158,
+   "setup_ms": 25.35889996215701
+  },
+  "fallback_damped_rho0.9": {
+   "converged": true,
+   "status": "success",
+   "corrections": 11,
+   "solve_ms": 60.41370006278157,
+   "setup_ms": 40.10430001653731,
+   "rel_res": 5.932894109794542e-11,
+   "fwd": 4.802366667060486e-06,
+   "bn": 1.5199803418836377e-12,
+   "bc": 7.82518847495743e-12,
+   "accepted": 11,
+   "rejected": 0,
+   "eta_hat_median": 0.28810481654688996
+  }
+ },
+ "1e+08": {
+  "boosted_pivots_LU32": 0,
+  "boosted_pivots_LU64": 0,
+  "lu64_noboost": {
+   "converged": true,
+   "rel_res": 1.438479758115646e-14,
+   "fwd": 1.740703268951782e-08,
+   "bn": 4.0356773489199176e-16,
+   "bc": 2.026567655335551e-15,
+   "solve_ms": 1.3707000762224197,
+   "setup_ms": 23.413200164213777
+  },
+  "fallback_damped_rho0.9": {
+   "converged": true,
+   "status": "success",
+   "corrections": 3,
+   "solve_ms": 17.492200015112758,
+   "setup_ms": 41.771299904212356,
+   "rel_res": 2.149088479254239e-12,
+   "fwd": 1.4757150255819511e-06,
+   "bn": 5.0469876914832717e-14,
+   "bc": 2.782299805402036e-13,
+   "accepted": 2,
+   "rejected": 1,
+   "eta_hat_median": 0.0015598444595644407
+  }
+ },
+ "1e+10": {
+  "boosted_pivots_LU32": 0,
+  "boosted_pivots_LU64": 0,
+  "lu64_noboost": {
+   "converged": true,
+   "rel_res": 8.653573826207554e-15,
+   "fwd": 1.1798361839959299e-06,
+   "bn": 2.397287383075399e-16,
+   "bc": 1.4310455044997063e-15,
+   "solve_ms": 1.2875001411885023,
+   "setup_ms": 29.761699959635735
+  },
+  "fallback_damped_rho0.9": {
+   "converged": true,
+   "status": "success",
+   "corrections": 3,
+   "solve_ms": 13.70340003632009,
+   "setup_ms": 38.29879988916218,
+   "rel_res": 3.9023437669778346e-13,
+   "fwd": 2.4807923954791472e-05,
+   "bn": 9.018207213817855e-15,
+   "bc": 4.8303252767843715e-14,
+   "accepted": 2,
+   "rejected": 1,
+   "eta_hat_median": 0.00028982139980585547
+  }
+ },
+ "1e+12": {
+  "boosted_pivots_LU32": 0,
+  "boosted_pivots_LU64": 278,
+  "lu64_noboost": {
+   "converged": true,
+   "rel_res": 9.94830655159295e-15,
+   "fwd": 0.00011620901332077027,
+   "bn": 3.173500886057654e-16,
+   "bc": 1.814725744708766e-15,
+   "solve_ms": 1.0911999270319939,
+   "setup_ms": 25.20660008303821
+  },
+  "fallback_damped_rho0.9": {
+   "converged": false,
+   "status": "rejected",
+   "corrections": 4,
+   "solve_ms": 13.406699988991022,
+   "setup_ms": 38.17349998280406,
+   "rel_res": 1.918964323004131e-06,
+   "fwd": 2525.3544464769147,
+   "bn": 4.278430899957707e-11,
+   "bc": 2.780670103499466e-10,
+   "accepted": 2,
+   "rejected": 2,
+   "eta_hat_median": 0.4651923648548365
+  }
+ },
+ "environment": {
+  "backend_flags": {
+   "cuda.matmul.allow_tf32": false,
+   "cudnn.allow_tf32": false,
+   "cuda.matmul.allow_fp16_reduced_precision_reduction": false,
+   "cuda.matmul.allow_bf16_reduced_precision_reduction": false,
+   "float32_matmul_precision": "highest"
+  },
+  "torch": "2.11.0+cu128",
+  "gpu": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+  "protocol": "warmup=3, reps=15, tau=1e-10"
+ }
+}

@@ -1,0 +1,154 @@
+{
+ "g32_residual": {
+  "converged": true,
+  "status": "success",
+  "corrections": 3,
+  "accepted": 3,
+  "rejected": 0,
+  "solve_ms": 118.42270009219646,
+  "rel_res": 8.962146821798381e-13,
+  "eta_hat_median": 9.635902666349889e-05,
+  "matvecs": {
+   "fp64": {
+    "matvec": 5,
+    "matmat_cols": 0
+   },
+   "fp32": {
+    "matvec": 347,
+    "matmat_cols": 0
+   }
+  }
+ },
+ "g32_energy": {
+  "converged": true,
+  "status": "success",
+  "corrections": 3,
+  "accepted": 3,
+  "rejected": 0,
+  "solve_ms": 150.71985009126365,
+  "rel_res": 8.962146821798381e-13,
+  "eta_hat_median": 9.635902666349889e-05,
+  "matvecs": {
+   "fp64": {
+    "matvec": 8,
+    "matmat_cols": 0,
+    "absmatvec": 6
+   },
+   "fp32": {
+    "matvec": 347,
+    "matmat_cols": 0
+   }
+  }
+ },
+ "g48_residual": {
+  "converged": true,
+  "status": "success",
+  "corrections": 3,
+  "accepted": 3,
+  "rejected": 0,
+  "solve_ms": 201.8907000310719,
+  "rel_res": 8.789723858738929e-13,
+  "eta_hat_median": 9.579582391380062e-05,
+  "matvecs": {
+   "fp64": {
+    "matvec": 5,
+    "matmat_cols": 0
+   },
+   "fp32": {
+    "matvec": 529,
+    "matmat_cols": 0
+   }
+  }
+ },
+ "g48_energy": {
+  "converged": true,
+  "status": "success",
+  "corrections": 3,
+  "accepted": 3,
+  "rejected": 0,
+  "solve_ms": 225.663400022313,
+  "rel_res": 8.789723858738929e-13,
+  "eta_hat_median": 9.579582391380062e-05,
+  "matvecs": {
+   "fp64": {
+    "matvec": 8,
+    "matmat_cols": 0,
+    "absmatvec": 6
+   },
+   "fp32": {
+    "matvec": 529,
+    "matmat_cols": 0
+   }
+  }
+ },
+ "counterexample": {
+  "y": 9007199254740992.0,
+  "g": 9007199254740994.0,
+  "r": 2.0,
+  "d": 0.25,
+  "y_new_equals_y": true,
+  "proposed_step_expression": -0.46875,
+  "proposed_step_accepts": true,
+  "committed_h": 0.0,
+  "dphi_hat": 0.0,
+  "bound": 0.0,
+  "certified_test_accepts": false
+ },
+ "energy_margins": {
+  "g32": [
+   {
+    "t": 0,
+    "dphi_hat": -3.024711536426054,
+    "bound": 5.795435159935063e-11,
+    "ratio_bound_over_dphi": 1.9160290461228072e-11,
+    "accepted": 1.0
+   },
+   {
+    "t": 1,
+    "dphi_hat": -4.722956866340473e-07,
+    "bound": 1.1809834430519753e-15,
+    "ratio_bound_over_dphi": 2.500517105012323e-09,
+    "accepted": 1.0
+   },
+   {
+    "t": 2,
+    "dphi_hat": -2.0029118267837657e-15,
+    "bound": 1.6054567411978543e-21,
+    "ratio_bound_over_dphi": 8.015613666707753e-07,
+    "accepted": 1.0
+   }
+  ],
+  "g48": [
+   {
+    "t": 0,
+    "dphi_hat": -3.002643641714706,
+    "bound": 1.941386002478183e-10,
+    "ratio_bound_over_dphi": 6.46558910790201e-11,
+    "accepted": 1.0
+   },
+   {
+    "t": 1,
+    "dphi_hat": -3.509268216614063e-07,
+    "bound": 1.933844417667542e-15,
+    "ratio_bound_over_dphi": 5.510677150615243e-09,
+    "accepted": 1.0
+   },
+   {
+    "t": 2,
+    "dphi_hat": -3.1783476938185357e-15,
+    "bound": 3.156909727466668e-21,
+    "ratio_bound_over_dphi": 9.93254996489666e-07,
+    "accepted": 1.0
+   }
+  ]
+ },
+ "backend": {
+  "cuda.matmul.allow_tf32": false,
+  "cudnn.allow_tf32": false,
+  "cuda.matmul.allow_fp16_reduced_precision_reduction": false,
+  "cuda.matmul.allow_bf16_reduced_precision_reduction": false,
+  "float32_matmul_precision": "highest"
+ },
+ "torch": "2.11.0+cu128",
+ "gpu": "NVIDIA GeForce RTX 5070 Ti Laptop GPU"
+}

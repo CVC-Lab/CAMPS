@@ -1,0 +1,11 @@
+# Environment used for every result in results/ (see the "environment" field
+# of each JSON file): Python 3.11.9, CUDA 12.8, NVIDIA GeForce RTX 5070 Ti
+# Laptop GPU, driver 610.47.
+#
+# torch must be a CUDA build. The exact wheel used was torch 2.11.0+cu128,
+# installed with
+#   pip install torch==2.11.0 --index-url https://download.pytorch.org/whl/cu128
+torch==2.11.0
+numpy==2.3.1
+scipy==1.16.2
+matplotlib==3.10.3

@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering
+\small
+\caption{dense_wc: dense-nonsym-n8192-k1e+02. Median over 15 timed runs after 3 warmups; times in ms.}
+\label{tab:dense_wc-dense-nonsym-n8192-k1e+02}
+\begin{tabular}{lrrrrlrr}
+\hline
+Method & Setup & Solve & Total & Outer & Status & $\|b-Ax\|_2/\|b\|_2$ & Mem (MiB) \\
+\hline
+$\mathrm{LU}_{64}\ \text{(direct)}$ & 864.2 & 4.1 & 868.3 & 1 & converged & 2.81e-13 & 1024.0 \\
+$\mathrm{FGMRES}_{64}(\mathrm{LU}_{64})$ & 867.8 & 11.5 & 879.2 & 1 & converged & 2.84e-13 & 1026.6 \\
+$\mathrm{IR}_{64\leftarrow 32}[\mathrm{LU}_{32}]\ \text{(plain IR)}$ & 69.6 & 21.1 & 90.7 & 3 & converged & 1.23e-11 & 1024.0 \\
+$\mathrm{FGMRES}_{64}[\mathrm{IR}_{64\leftarrow 32}[\mathrm{LU}_{32}]]$ & 65.9 & 28.7 & 94.6 & 1 & converged & 1.19e-11 & 1026.6 \\
+\hline
+\end{tabular}
+\end{table}
