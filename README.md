@@ -16,9 +16,6 @@ code for every experiment in the paper, the archived results behind every
 number in it, and a verification suite that reruns the key checks on any
 CUDA GPU.
 
-> Kevin Li and Chandrajit Bajaj, *CAMPS: Composable Adapters for
-> Mixed-Precision Solvers*, preprint, 2026. The University of Texas at Austin.
-
 ## Solver trees
 
 A tree is written from the root down. For example,
