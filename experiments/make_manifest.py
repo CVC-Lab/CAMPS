@@ -30,6 +30,10 @@ META = OrderedDict([
                                    "Section 5.4, thresholded damped fallback at kappa <= 1e8 (the file also "
                                    "records pivot-boost counts, 278 at kappa = 1e12, which the "
                                    "paper does not report)")),
+    ("rhs_error_check.json", ("python -m experiments.rhs_error_check",
+                              "same problems and seeds as dense_ic.json (kappa = 1e4, 1e8, 1e10, 1e12)",
+                              "Appendix A.8 and A.9, right-hand-side construction error and forward "
+                              "errors against both reference vectors")),
     ("sparse_spd.json", ("python -m experiments.run_experiments --exp sparse_spd",
                          "sparse_problem('poisson', g, seed=300+g)",
                          "Section 5.5, Poisson table")),

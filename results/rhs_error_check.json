@@ -1,0 +1,117 @@
+{
+ "experiment": "rhs_error_check",
+ "environment": {
+  "gpu": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+  "torch": "2.11.0+cu128",
+  "cuda": "12.8",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.11.9",
+  "backend_flags": {
+   "cuda.matmul.allow_tf32": false,
+   "cudnn.allow_tf32": false,
+   "cuda.matmul.allow_fp16_reduced_precision_reduction": false,
+   "cuda.matmul.allow_bf16_reduced_precision_reduction": false,
+   "float32_matmul_precision": "highest"
+  },
+  "driver": "610.47, 12227 MiB"
+ },
+ "records": [
+  {
+   "problem": "dense-nonsym-n2048-k1e+04",
+   "method": "exact right-hand-side check",
+   "kappa": 10000.0,
+   "seed": 204,
+   "n": 2048,
+   "eb_rel": 2.173753157204563e-16,
+   "eb_over_u64": 1.957942781756382,
+   "eb_bound_gamma_n": 6.373655792344199e-12,
+   "xs_minus_xm_rel": 1.211042721025493e-13,
+   "norm_b": 0.23103427837104035,
+   "norm_xm": 0.9633786176910389,
+   "solves": {
+    "LU64 (direct)": {
+     "rel_residual": 2.2843377551423338e-14,
+     "fwd_vs_xm": 6.1863432799655046e-12,
+     "fwd_vs_xs": 6.18655280333936e-12,
+     "residual_only_bound": 5.478223360198006e-11
+    }
+   }
+  },
+  {
+   "problem": "dense-nonsym-n2048-k1e+08",
+   "method": "exact right-hand-side check",
+   "kappa": 100000000.0,
+   "seed": 208,
+   "n": 2048,
+   "eb_rel": 2.2326942152677864e-16,
+   "eb_over_u64": 2.011032167182453,
+   "eb_bound_gamma_n": 6.8495005155090994e-12,
+   "xs_minus_xm_rel": 5.973379544185918e-10,
+   "norm_b": 0.16060198042577473,
+   "norm_xm": 1.0053601077831444,
+   "solves": {
+    "LU64 (direct)": {
+     "rel_residual": 1.4382539160689516e-14,
+     "fwd_vs_xm": 1.740703268951782e-08,
+     "fwd_vs_xs": 1.7372472711568083e-08,
+     "residual_only_bound": 2.2975491616146687e-07
+    }
+   }
+  },
+  {
+   "problem": "dense-nonsym-n2048-k1e+10",
+   "method": "exact right-hand-side check",
+   "kappa": 10000000000.0,
+   "seed": 210,
+   "n": 2048,
+   "eb_rel": 2.2177524697393627e-16,
+   "eb_over_u64": 1.9975738392636382,
+   "eb_bound_gamma_n": 6.566323177796559e-12,
+   "xs_minus_xm_rel": 4.869476996446689e-08,
+   "norm_b": 0.15020161189668668,
+   "norm_xm": 1.0092980075438396,
+   "solves": {
+    "LU64 (direct)": {
+     "rel_residual": 8.65830412759059e-15,
+     "fwd_vs_xm": 1.17983618399593e-06,
+     "fwd_vs_xs": 1.1895047633251086e-06,
+     "residual_only_bound": 1.28851065447026e-05
+    },
+    "IR64<-32[LU32 | LU64 fallback]": {
+     "rel_residual": 4.691342621326452e-13,
+     "fwd_vs_xm": 2.4220605959038408e-05,
+     "fwd_vs_xs": 2.4223164056948085e-05,
+     "residual_only_bound": 0.0006981557661028609
+    }
+   }
+  },
+  {
+   "problem": "dense-nonsym-n2048-k1e+12",
+   "method": "exact right-hand-side check",
+   "kappa": 1000000000000.0,
+   "seed": 212,
+   "n": 2048,
+   "eb_rel": 2.035459961397525e-16,
+   "eb_over_u64": 1.8333793447354916,
+   "eb_bound_gamma_n": 6.245592212546708e-12,
+   "xs_minus_xm_rel": 3.845743969269166e-06,
+   "norm_b": 0.1409142851077339,
+   "norm_xm": 0.992228890259787,
+   "solves": {
+    "LU64 (direct)": {
+     "rel_residual": 9.948456494154873e-15,
+     "fwd_vs_xm": 0.00011620901332077027,
+     "fwd_vs_xs": 0.00011644672673628838,
+     "residual_only_bound": 0.0014128591180530775
+    },
+    "IR64<-32[LU32 | LU64 fallback]": {
+     "rel_residual": 1.8723195575613476e-12,
+     "fwd_vs_xm": 0.010328680314750737,
+     "fwd_vs_xs": 0.01032823399297756,
+     "residual_only_bound": 0.2659029328181603
+    }
+   }
+  }
+ ],
+ "note": "exact right-hand-side construction error and forward errors against both reference vectors; no timings"
+}

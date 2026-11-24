@@ -46,6 +46,18 @@ Install with `pip install -r requirements.txt` (CUDA build of torch required). `
 - **Contents:** `1e+04`, `1e+06`, `1e+07`, `1e+08`, `1e+10`, `1e+12`
 - **Environment:** NVIDIA GeForce RTX 5070 Ti Laptop GPU; driver None; CUDA None; torch 2.11.0+cu128; Python None; None; TF32 matmul False, fp16 reduced-precision reductions False, float32 matmul precision 'highest'
 
+## `rhs_error_check.json`
+
+- **Regenerate:** `python -m experiments.rhs_error_check`
+- **Seeds:** same problems and seeds as dense_ic.json (kappa = 1e4, 1e8, 1e10, 1e12)
+- **Used in:** Appendix A.8 and A.9, right-hand-side construction error and forward errors against both reference vectors
+- **Records:** 4 (4 problems x methods)
+- **Protocol:** n/a
+- **Problems:** `dense-nonsym-n2048-k1e+04`, `dense-nonsym-n2048-k1e+08`, `dense-nonsym-n2048-k1e+10`, `dense-nonsym-n2048-k1e+12`
+- **Methods:** `exact right-hand-side check`
+- **Note:** exact right-hand-side construction error and forward errors against both reference vectors; no timings
+- **Environment:** NVIDIA GeForce RTX 5070 Ti Laptop GPU; driver 610.47, 12227 MiB; CUDA 12.8; torch 2.11.0+cu128; Python 3.11.9; Windows-10-10.0.26300-SP0; TF32 matmul False, fp16 reduced-precision reductions False, float32 matmul precision 'highest'
+
 ## `sparse_spd.json`
 
 - **Regenerate:** `python -m experiments.run_experiments --exp sparse_spd`
