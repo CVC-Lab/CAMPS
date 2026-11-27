@@ -1,7 +1,7 @@
 """CAMPS: Composable Adapters for Mixed-Precision Solvers.
 
 Reference implementation of the framework in Kevin Li and Chandrajit Bajaj,
-"CAMPS: Composable Adapters for Mixed-Precision Solvers" (preprint, 2026).
+"CAMPS: Composable Adapters for Mixed-Precision Solvers" (arXiv:2611.33703, 2026).
 Comments of the form "spec §N" refer to an internal design specification that
 is not part of this repository. experiments/tacc/README.md maps the paper's
 algorithms and sections to the code.

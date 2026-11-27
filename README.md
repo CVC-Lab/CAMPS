@@ -16,6 +16,9 @@ code for every experiment in the paper, the archived results behind every
 number in it, and a verification suite that reruns the key checks on any
 CUDA GPU.
 
+**Paper:** Kevin Li and Chandrajit Bajaj, *CAMPS: Composable Adapters for
+Mixed-Precision Solvers*, [arXiv:2611.33703](https://arxiv.org/abs/2611.33703), 2026.
+
 ## Solver trees
 
 A tree is written from the root down. For example,
@@ -152,11 +155,13 @@ has the setup script and Slurm jobs to run it on a TACC system.
 
 ```bibtex
 @misc{li2026camps,
-  author = {Kevin Li and Chandrajit Bajaj},
-  title  = {{CAMPS}: Composable Adapters for Mixed-Precision Solvers},
-  year   = {2026},
-  note   = {Preprint},
-  url    = {https://github.com/CVC-Lab/CAMPS}
+  author        = {Kevin Li and Chandrajit Bajaj},
+  title         = {{CAMPS}: Composable Adapters for Mixed-Precision Solvers},
+  year          = {2026},
+  eprint        = {2611.33703},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.MS},
+  url           = {https://arxiv.org/abs/2611.33703}
 }
 ```
 
